@@ -40,17 +40,21 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  text-align: right;
 
 }
 
-input {
+input{
   width: 100%;
   box-sizing: content-box;
-  height: 80px;
+  height: 60px;
   border: none;
   background-color:#77dd77;
   color: black;
+  position:relative;
 }
+
+
 
 .past {
   background-color: #d3d3d3;
@@ -67,12 +71,14 @@ input {
   color: white;
 }
 
+
 .saveBtn {
   /*border-left: 1px solid black;*/
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  
 }
 
 .saveBtn i:hover {
