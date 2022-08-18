@@ -1,9 +1,10 @@
 
-
+//displays current date
 var timeDisplayEl = moment();
 $("#currentDay").text(timeDisplayEl.format("MMMM Do, YYYY"));
-
+//main function
 $(document).ready(function () {
+    //allows save button to save typed infomation to local storage
   $(".saveBtn").on("click", function () {
   
       var text = $(this).siblings(".task").val();
@@ -12,13 +13,13 @@ $(document).ready(function () {
 
       localStorage.setItem(time, text);
   })
- 
-  function timeTracker() {
+ //allows time blocks to change depending on current time
+  function colorBlocks() {
     
       var timeNow = moment().hour();
-    
+    //
       $(".time-block").each(function () {
-          var blockTime = parseInt($(this).attr("id"));
+          var blockTime = parseInt($(this).attr("value"));
 
       
           if (blockTime < timeNow) {
@@ -39,16 +40,16 @@ $(document).ready(function () {
           }
       })
   }
-
+//saves typed information to local storage
   $("#hour9 .task").val(localStorage.getItem("hour9"));
   $("#hour10 .task").val(localStorage.getItem("hour10"));
   $("#hour11 .task").val(localStorage.getItem("hour11"));
   $("#hour12 .task").val(localStorage.getItem("hour12"));
-  $("#hour1 .task").val(localStorage.getItem("hour1"));
-  $("#hour2 .task").val(localStorage.getItem("hour2"));
-  $("#hour3 .task").val(localStorage.getItem("hour3"));
-  $("#hour4 .task").val(localStorage.getItem("hour4"));
-  $("#hour5 .task").val(localStorage.getItem("hour5"));
+  $("#hour13 .task").val(localStorage.getItem("hour13"));
+  $("#hour14 .task").val(localStorage.getItem("hour14"));
+  $("#hour15 .task").val(localStorage.getItem("hour15"));
+  $("#hour16 .task").val(localStorage.getItem("hour16"));
+  $("#hour17 .task").val(localStorage.getItem("hour17"));
 
- timeTracker();
+ colorBlocks();
 }) 
